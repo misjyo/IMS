@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-import { getProducts, adjustStock, getDashboardStats, createProduct,deleteProduct,updateProduct } from '../controllers/productController.js';
+import { getProducts, getDashboardStats, adjustStock,createProduct,deleteProduct,updateProduct } from '../controllers/productController.js';
 import { protect, adminOnly } from '../middleware/authMiddleware.js';
 
 router.get('/stats', protect, getDashboardStats);
